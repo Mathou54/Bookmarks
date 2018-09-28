@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {BookmarksComponent} from './bookmarks.component';
+import {FormsModule} from '@angular/forms';
 
 describe('BookmarksComponent', () => {
 	let component: BookmarksComponent;
@@ -8,6 +9,9 @@ describe('BookmarksComponent', () => {
 
 	beforeEach(async(() => {
 		TestBed.configureTestingModule({
+			imports: [
+				FormsModule
+			],
 			declarations: [BookmarksComponent]
 		})
 			.compileComponents();
