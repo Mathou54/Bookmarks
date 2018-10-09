@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BookmarksGroup} from '../bookmarks-group';
+import {bookmarks} from './bookmarks.file';
 
 @Component({
 	selector: 'app-bookmarks',
@@ -10,25 +11,7 @@ export class BookmarksComponent implements OnInit {
 
 	public search: string = '';
 
-	public groups: BookmarksGroup[] = [{
-		title: 'title1',
-		bookmarks: [{
-			text: 'text1',
-			url: 'url1'
-		}, {
-			text: 'text2',
-			url: 'url2'
-		}]
-	}, {
-		title: 'title2',
-		bookmarks: [{
-			text: 'text3',
-			url: 'url3'
-		}, {
-			text: 'text4',
-			url: 'url4'
-		}]
-	}];
+	public groups: BookmarksGroup[] = bookmarks;
 
 	constructor() {
 	}
