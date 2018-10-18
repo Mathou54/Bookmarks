@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BookmarksGroup} from '../bookmarks-group';
-import {bookmarks} from './bookmarks.file';
+import {environment} from '../../environments/environment';
 
 @Component({
 	selector: 'app-bookmarks',
@@ -14,8 +14,8 @@ export class BookmarksComponent implements OnInit {
 	public search: string = '';
 	public shouldResetSearch: boolean = true;
 
-	public groups: BookmarksGroup[] = bookmarks;
-	public filteredGroups: BookmarksGroup[] = bookmarks;
+	public groups: BookmarksGroup[] = environment.data.bookmarks;
+	public filteredGroups: BookmarksGroup[] = environment.data.bookmarks;
 
 	constructor() {
 	}

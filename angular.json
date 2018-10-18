@@ -45,6 +45,23 @@
 							"extractLicenses": true,
 							"vendorChunk": false,
 							"buildOptimizer": true
+						},
+						"arhs": {
+							"fileReplacements": [
+								{
+									"replace": "src/environments/environment.ts",
+									"with": "src/environments/environment.arhs.ts"
+								}
+							],
+							"optimization": true,
+							"outputHashing": "all",
+							"sourceMap": false,
+							"extractCss": true,
+							"namedChunks": false,
+							"aot": true,
+							"extractLicenses": true,
+							"vendorChunk": false,
+							"buildOptimizer": true
 						}
 					}
 				},
@@ -56,6 +73,9 @@
 					"configurations": {
 						"production": {
 							"browserTarget": "bookmarks:build:production"
+						},
+						"arhs": {
+							"browserTarget": "bookmarks:build:arhs"
 						}
 					}
 				},
