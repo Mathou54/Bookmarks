@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BookmarksGroup} from '../bookmarks-group';
-import {bookmarks} from './bookmarks.file';
+import {environment} from '../../environments/environment';
 
 @Component({
 	selector: 'app-bookmarks',
@@ -14,8 +14,8 @@ export class BookmarksComponent implements OnInit {
 	public search: string = '';
 	public shouldResetSearch: boolean = true;
 
-	public groups: BookmarksGroup[] = bookmarks;
-	public filteredGroups: BookmarksGroup[] = bookmarks;
+	public groups: BookmarksGroup[] = environment.data.bookmarks;
+	public filteredGroups: BookmarksGroup[] = environment.data.bookmarks;
 
 	constructor() {
 	}
@@ -38,13 +38,29 @@ export class BookmarksComponent implements OnInit {
 		}
 	}
 
+	/**
+	 * Filter groups input by filtering with search input (ignore case).
+	 * The groups are searched on title and on text of each bookmarks.
+	 *
+	 * @param groups the group to filter on.
+	 * @param search the search param (case ignored).
+	 */
 	private filterGroup(groups: BookmarksGroup[], search: string): BookmarksGroup[] {
-		return groups.map(group => {
-			return {
-				title: group.title,
-				bookmarks: group.bookmarks.filter(bookmark => bookmark.text.indexOf(search) >= 0)
-			};
-		})
-			.filter(group => group.bookmarks.length > 0);
+		if (search) {
+			const searchLowerCase = search.toLowerCase();
+			return groups.map(group => {
+				if (group.title.toLowerCase().indexOf(searchLowerCase) >= 0) {
+					return group;
+				} else {
+					return {
+						title: group.title,
+						bookmarks: group.bookmarks.filter(bookmark =>
+							bookmark.text.toLowerCase().indexOf(searchLowerCase) >= 0)
+					};
+				}
+			}).filter(group => group.bookmarks.length > 0);
+		} else {
+			return groups;
+		}
 	}
 }
