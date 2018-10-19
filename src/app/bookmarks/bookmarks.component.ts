@@ -11,8 +11,8 @@ export class BookmarksComponent implements OnInit {
 
 	public readonly resetSearchKeys: string[] = ['Enter', 'Escape'];
 
-	public search: string = '';
-	public shouldResetSearch: boolean = true;
+	public search = '';
+	public shouldResetSearch = true;
 
 	public groups: BookmarksGroup[] = environment.data.bookmarks;
 	public filteredGroups: BookmarksGroup[] = environment.data.bookmarks;

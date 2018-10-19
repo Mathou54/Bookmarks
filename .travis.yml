@@ -4,12 +4,14 @@ dist: trusty
 language: node_js
 node_js: "lts/*"
 
-apt:
-  sources:
-  - google-chrome
-  packages:
-  - google-chrome-stable
-  - google-chrome-beta
+#apt:
+#  sources:
+#  - google-chrome
+#  packages:
+#  - google-chrome-stable
+#  - google-chrome-beta
+addons:
+  chrome: stable
 
 before_install:
 - export CHROME_BIN=chromium-browser
@@ -17,7 +19,9 @@ before_install:
 - sh -e /etc/init.d/xvfb start
 
 script:
+- npm run lint
 - npm test -- --watch=false
+- npm run e2e
 
 after_success:
 - npm run build -- --aot --prod
