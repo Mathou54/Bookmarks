@@ -20,7 +20,10 @@ export const bookmarks: BookmarksGroup[] = [{
 	}, {
 		text: 'Nexus',
 		url: 'http://maven.aris-lux.lan/nexus/#welcome'
-	}]
+    }, {
+        text: 'Projects · Dashboard · GitLab',
+        url: 'https://git-cube.arhs-developments.com/'
+    }]
 }, {
 	title: 'Management',
 	bookmarks: [{
@@ -38,7 +41,13 @@ export const bookmarks: BookmarksGroup[] = [{
 	}, {
 		text: 'Christmas event',
 		url: 'https://christmas-event.arhs-group.com/'
-	}]
+    }, {
+        text: 'eBenefits',
+        url: 'https://www.ebenefits.lu/eBenefits/home'
+    }, {
+        text: 'Report - Timesheet Report - ARHS Developments S.A.',
+        url: 'https://helpdesk2.arhs-developments.com/secure/ConfigureReport.jspa?startDate=2018-10-01&endDate=2018-10-31&targetUser=&targetGroup=&excludeTargetGroup=&projectRoleId=&projectid=&filterid=&priority=&commentfirstword=&sum=day&groupByField=&moreFields=&sortBy=&sortDir=ASC&selectedProjectId=20581&reportKey=jira-timesheet-plugin%3Areport&atl_token=BQZA-CWU8-8C8A-0LV6%7C888197d7071fb31f3d8af60d07864231ab63613a%7Clin&Next=Next'
+    }]
 }, {
 	title: 'Project eForms',
 	bookmarks: [{
@@ -59,5 +68,26 @@ export const bookmarks: BookmarksGroup[] = [{
 	}, {
 		text: 'eForms Gitlab wiki',
 		url: 'https://git-cube.arhs-developments.com/DGEAC-Eforms/web-esc-parent/wikis/home'
-	}]
+    }, {
+        text: '[Weblogic console] Page d\'accueil - eforms - Console WLS',
+        url: 'http://localhost:7001/console/console.portal?_nfpb=true&_pageLabel=HomePage1'
+    }]
+}, {
+    title: 'DBIT',
+    bookmarks: [{
+        text: '52.30.66.136/AIE/AIE_api/fr/suggest/facts/truc',
+        url: 'http://52.30.66.136/AIE/AIE_api/fr/suggest/facts/truc'
+    }, {
+        text: 'Artificial Intelligence Experience for Lawyers by Larcier',
+        url: 'http://52.30.66.136/AIE/dev/'
+    }]
+}, {
+    title: 'RBC',
+    bookmarks: [{
+        text: 'ace.global.ART (Royal Bank Of Canada) - Flowdock',
+        url: 'https://www.flowdock.com/app/royal-bank-of-canada/rbc-one'
+    }, {
+        text: 'Artificial Intelligence Experience for Lawyers by Larcier',
+        url: 'http://52.30.66.136/AIE/dev/'
+    }]
 }];
