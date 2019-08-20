@@ -20,11 +20,11 @@ before_install:
 
 script:
 - npm run lint
-- npm test -- --watch=false
+- npm test
 - npm run e2e
 
 after_success:
-- npm run build -- --aot --prod
+- npm run build
 
 deploy:
 - provider: script
@@ -36,6 +36,6 @@ deploy:
 - provider: script
   skip_cleanup: true
   script:
-    npm run build -- --aot --prod --configuration=arhs && npm run deploy -- --token=$FIREBASE_KEY -P arhs-bookmarks
+    npm run build -- --configuration=arhs && npm run deploy -- --token=$FIREBASE_KEY -P arhs-bookmarks
   on:
     branch: master
