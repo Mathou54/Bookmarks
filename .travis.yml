@@ -36,6 +36,6 @@ deploy:
 - provider: script
   skip_cleanup: true
   script:
-    npm run build -- --aot --prod --configuration=arhs && npm run deploy -- --token=$FIREBASE_KEY -P arhs-bookmarks
+	  npm run build --configuration=arhs && npm run deploy -- --token=$FIREBASE_KEY -P arhs-bookmarks
   on:
     branch: master
