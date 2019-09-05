@@ -116,7 +116,7 @@ export const bookmarks: BookmarksGroup[] = [{
 		text: 'git eESB Monitoring (dev) - Microsoft Team Foundation Server'
 	}, {
 		url: 'https://eurofins-test2.coupahost.com/',
-		text: 'cce5@eurofins.com @ Coupa Home'
+		text: 'Coupa Home'
 	}, {
 		url: 'https://eurofinsau.myobadvanced.com/',
 		text: 'MYOB Advanced'
