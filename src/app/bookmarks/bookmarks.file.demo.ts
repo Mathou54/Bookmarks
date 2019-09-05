@@ -18,4 +18,22 @@ export const bookmarks: BookmarksGroup[] = [{
 		text: 'text4',
 		url: 'url4'
 	}]
+}, {
+	title: 'title3',
+	bookmarks: [{
+		text: 'text5',
+		url: 'url5'
+	}, {
+		text: 'text6',
+		url: 'url6'
+	}]
+}, {
+	title: 'title4',
+	bookmarks: [{
+		text: 'text7',
+		url: 'url7'
+	}, {
+		text: 'text8',
+		url: 'url8'
+	}]
 }];
