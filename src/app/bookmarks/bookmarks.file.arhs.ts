@@ -91,4 +91,43 @@ export const bookmarks: BookmarksGroup[] = [{
 		text: 'Artificial Intelligence Experience for Lawyers by Larcier',
 		url: 'http://52.30.66.136/AIE/dev/'
 	}]
+}, {
+	title: 'Eurofins',
+	bookmarks: [{
+		url: 'https://personal.eu.archive.veritas.com/',
+		text: 'Veritas Enterprise Vault.cloud Personal Archive'
+	}, {
+		url: 'https://it-servicedesk.area1.eurofins.local/otrs/customer.pl',
+		text: '2018101610034622 - Zoom - Ticket - Eurofins OTRS Service Centre'
+	}, {
+		url: 'https://app.gotomeeting.com/?meetingId=712488941',
+		text: 'GSB daily scrum meeting'
+	}, {
+		url: 'https://meet.lync.com/eurofins.com/y4dz/WVML15T6?sl=1',
+		text: 'Chrome Weekly Project Team Meeting India'
+	}, {
+		url: 'https://meet.lync.com/eurofins.com/y4dz/WVML15T6',
+		text: 'Skype Weekly Project Team Meeting India'
+	}, {
+		url: 'http://alm.eurofins.local/tfs/EurofinsCollection/eESB/GSB/_git/coupa-integration',
+		text: 'git coupa-integration (master) - Microsoft Team Foundation Server'
+	}, {
+		url: 'http://alm.eurofins.local/tfs/EurofinsCollection/eESB/GSB/_git/eESB%20Monitoring',
+		text: 'git eESB Monitoring (dev) - Microsoft Team Foundation Server'
+	}, {
+		url: 'https://eurofins-test2.coupahost.com/',
+		text: 'Coupa Home'
+	}, {
+		url: 'https://eurofinsau.myobadvanced.com/',
+		text: 'MYOB Advanced'
+	}, {
+		url: 'https://int.dms.eurofins.local/org/Lists/KGDs/Published.aspx',
+		text: 'Key Group Documents (KGDs) - 1. Published KGDs'
+	}, {
+		url: 'https://eurofinsau.myobadvanced.com/Main.aspx?CompanyID=NZ+Training&ScreenId=AP501000',
+		text: 'Myob'
+	}, {
+		url: 'https://iam.eurofins.local/identityiq/identities/identities.jsf#/identities/8ae314e3657e05b101667c1adab51556/accounts',
+		text: 'AD Detail [DateTime]::FromFileTime(\'132132312000000000\')'
+	}]
 }];
