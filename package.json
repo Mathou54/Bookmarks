@@ -7,7 +7,7 @@
 	"start:arhs": "ng serve --configuration=arhs",
 	"build": "ng build --aot --prod",
 	"build:dev": "ng build",
-	"test": "ng test --watch=false",
+	"test": "ng test --prod",
 	"test:dev": "ng test",
 	"lint": "ng lint",
 	"e2e": "ng e2e",
