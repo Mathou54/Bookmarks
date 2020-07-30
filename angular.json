@@ -13,16 +13,17 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "dist",
-						"index": "src/index.html",
-						"main": "src/main.ts",
-						"polyfills": "src/polyfills.ts",
-						"tsConfig": "src/tsconfig.app.json",
-						"assets": [
-							"src/favicon.ico",
-							"src/assets"
-						],
-						"styles": [
+					  "aot": true,
+					  "outputPath": "dist",
+					  "index": "src/index.html",
+					  "main": "src/main.ts",
+					  "polyfills": "src/polyfills.ts",
+					  "tsConfig": "src/tsconfig.app.json",
+					  "assets": [
+						"src/favicon.ico",
+						"src/assets"
+					  ],
+					  "styles": [
 							"node_modules/bootstrap/dist/css/bootstrap.css",
 							"src/styles.css"
 						],
@@ -30,16 +31,22 @@
 					},
 					"configurations": {
 						"production": {
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
-								}
-							],
-							"optimization": true,
-							"outputHashing": "all",
-							"sourceMap": false,
-							"extractCss": true,
+						  "budgets": [
+							{
+							  "type": "anyComponentStyle",
+							  "maximumWarning": "6kb"
+							}
+						  ],
+						  "fileReplacements": [
+							{
+							  "replace": "src/environments/environment.ts",
+							  "with": "src/environments/environment.prod.ts"
+							}
+						  ],
+						  "optimization": true,
+						  "outputHashing": "all",
+						  "sourceMap": false,
+						  "extractCss": true,
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
@@ -47,16 +54,22 @@
 							"buildOptimizer": true
 						},
 						"arhs": {
-							"fileReplacements": [
-								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.arhs.ts"
-								}
-							],
-							"optimization": true,
-							"outputHashing": "all",
-							"sourceMap": false,
-							"extractCss": true,
+						  "budgets": [
+							{
+							  "type": "anyComponentStyle",
+							  "maximumWarning": "6kb"
+							}
+						  ],
+						  "fileReplacements": [
+							{
+							  "replace": "src/environments/environment.ts",
+							  "with": "src/environments/environment.arhs.ts"
+							}
+						  ],
+						  "optimization": true,
+						  "outputHashing": "all",
+						  "sourceMap": false,
+						  "extractCss": true,
 							"namedChunks": false,
 							"aot": true,
 							"extractLicenses": true,
@@ -90,17 +103,23 @@
 					"options": {
 						"main": "src/test.ts",
 						"polyfills": "src/polyfills.ts",
-						"tsConfig": "src/tsconfig.spec.json",
-						"karmaConfig": "src/karma.conf.js",
-						"styles": [
-							"src/styles.css"
-						],
-						"scripts": [],
-						"assets": [
-							"src/favicon.ico",
-							"src/assets"
-						]
+					  "tsConfig": "src/tsconfig.spec.json",
+					  "karmaConfig": "src/karma.conf.js",
+					  "styles": [
+						"src/styles.css"
+					  ],
+					  "scripts": [],
+					  "assets": [
+						"src/favicon.ico",
+						"src/assets"
+					  ]
+					},
+				  "configurations": {
+					"production": {
+					  "browsers": "ChromeHeadlessNoSandbox",
+					  "watch": false
 					}
+				  }
 				},
 				"lint": {
 					"builder": "@angular-devkit/build-angular:tslint",
