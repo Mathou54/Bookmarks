@@ -1,5 +1,6 @@
 # Bookmarks
 [![Build Status](https://travis-ci.org/Mathou54/Bookmarks.svg?branch=master)](https://travis-ci.org/Mathou54/Bookmarks)
+![Node CI](https://github.com/Mathou54/Bookmarks/workflows/Node%20CI/badge.svg)
 
 [Demo](https://bookmarks-c204f.firebaseapp.com/).
 
