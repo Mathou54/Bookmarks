@@ -10,7 +10,8 @@
 	"test": "ng test --prod",
 	"test:dev": "ng test",
 	"lint": "ng lint",
-	"e2e": "ng e2e",
+	"e2e": "ng e2e --prod",
+	"e2e:dev": "ng e2e",
 	"deploy": "firebase deploy",
 	"firebase": "firebase",
 	"canICommit": "npm run build && npm run test && npm run e2e && npm run ng -- make-this-awesome"
