@@ -36,7 +36,7 @@ jobs:
 
       - name: deploy to firebase (demo)
         if: github.ref == 'refs/heads/master' && matrix.node-version == '12.x'
-        run: npm run deploy -- --token=$FIREBASE_KEY
+        run: npm run deploy -- --token=${{secrets.FIREBASE_KEY}}
       - name: deploy to firebase (arhs-bookmarks)
         if: github.ref == 'refs/heads/master' && matrix.node-version == '12.x'
         run: npm run build -- --configuration=arhs && npm run deploy -- --token=${{secrets.FIREBASE_KEY}} -P arhs-bookmarks
