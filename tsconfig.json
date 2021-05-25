@@ -8,8 +8,7 @@
 	"sourceMap": true,
 	"declaration": false,
 	"module": "es2020",
-	"moduleResolution": "node",
-	"emitDecoratorMetadata": true,
+  "moduleResolution": "node",
 	"experimentalDecorators": true,
 	"target": "es2015",
 	"typeRoots": [
