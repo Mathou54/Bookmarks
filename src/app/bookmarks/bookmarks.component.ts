@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {BookmarksGroup} from '../bookmarks-group';
 import {environment} from '../../environments/environment';
 
@@ -7,7 +7,7 @@ import {environment} from '../../environments/environment';
 	templateUrl: './bookmarks.component.html',
 	styleUrls: ['./bookmarks.component.css']
 })
-export class BookmarksComponent implements OnInit {
+export class BookmarksComponent {
 
 	public readonly resetSearchKeys: string[] = ['Enter', 'Escape'];
 
@@ -18,9 +18,6 @@ export class BookmarksComponent implements OnInit {
 	public filteredGroups: BookmarksGroup[] = environment.data.bookmarks;
 
 	constructor() {
-	}
-
-	ngOnInit() {
 	}
 
 	public onKeyUpOnSearch(event: KeyboardEvent): void {

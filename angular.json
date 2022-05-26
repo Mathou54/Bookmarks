@@ -111,17 +111,26 @@
 			],
 			"scripts": [],
 			"assets": [
-			  "src/favicon.ico",
-			  "src/assets"
+				"src/favicon.ico",
+				"src/assets"
 			]
 		  },
-		  "configurations": {
-			"production": {
-			  "browsers": "ChromeHeadlessNoSandbox",
-			  "watch": false
+			"configurations": {
+				"production": {
+					"browsers": "ChromeHeadlessNoSandbox",
+					"watch": false
+				}
 			}
+		},
+		  "lint": {
+			  "builder": "@angular-eslint/builder:lint",
+			  "options": {
+				  "lintFilePatterns": [
+					  "src/**/*.ts",
+					  "src/**/*.html"
+				  ]
+			  }
 		  }
-		}
 	  }
 	},
 	"bookmarks-e2e": {
